@@ -7,12 +7,14 @@
            fetch="https://github.com/CyanogenMod/"
            review="review.cyanogenmod.com" />
   <remote name="PurityROM"
-           fetch="git://github.com/PurityROM/" /> 
+           fetch="git://github.com/PurityROM/" />
+  <remote name="cfx" 
+           fetch="https://bitbucket.org/codefirex/" />  
   <default revision="refs/tags/android-4.2.2_r1.2"
            remote="aosp"
            sync-j="4" />
 
-  <project path="build" name="platform_build" groups="pdk" remote="PurityROM" revision="4.2.2" >
+  <project path="build" name="platform_build" groups="pdk" remote="PurityROM" revision="gcc-4.8" >
     <copyfile src="core/root.mk" dest="Makefile" />
   </project>
   <project path="abi/cpp" name="platform/abi/cpp" groups="pdk" />
@@ -112,7 +114,7 @@
   <project path="external/jhead" name="platform/external/jhead" groups="pdk" />
   <project path="external/jmdns" name="platform/external/jmdns" />
   <project path="external/jmonkeyengine" name="platform/external/jmonkeyengine" />
-  <project path="external/jpeg" name="platform/external/jpeg" groups="pdk" />
+  <project path="external/jpeg" name="android_external_jpeg" groups="pdk" remote="PurityROM" revision="Linaro-4.2.2" />
   <project path="external/jsilver" name="platform/external/jsilver" />
   <project path="external/jsr305" name="platform/external/jsr305" />
   <project path="external/junit" name="platform/external/junit" />
@@ -161,7 +163,7 @@
   <project path="external/openfst" name="platform/external/openfst" />
   <project path="external/openssh" name="external_openssh" remote="PurityROM" revision="Linaro-4.2.2" />
   <project path="external/openssl" name="external_openssl" groups="pdk" remote="PurityROM" revision="Linaro-4.2.2" />
-  <project path="external/oprofile" name="external_oprofile" remote="PurityROM" revision="Linaro-4.2.2" />
+  <project path="external/oprofile" name="external_oprofile" remote="PurityROM" revision="gcc-4.8" />
   <project path="external/ping" name="external_ping" remote="PurityROM" revision="Linaro-4.2.2" />
   <project path="external/ping6" name="platform_external_ping6" remote="PurityROM" revision="Linaro-4.2.2" />
   <project path="external/ppp" name="platform/external/ppp" />
@@ -328,8 +330,10 @@
   <project path="prebuilts/gcc/darwin-x86/x86/i686-linux-android-4.6" name="platform/prebuilts/gcc/darwin-x86/x86/i686-linux-android-4.6" groups="pdk,darwin,x86" />
   <project path="prebuilts/gcc/linux-x86/arm/arm-eabi-4.6" name="platform/prebuilts/gcc/linux-x86/arm/arm-eabi-4.6" groups="pdk,linux,arm" />
   <project path="prebuilts/gcc/linux-x86/arm/arm-eabi-4.7" name="platform_prebuilts_gcc_linux-x86_arm_arm-eabi-4.7" remote="PurityROM" revision="4.2.2" groups="pdk,linux,arm" />
+  <project path="prebuilts/gcc/linux-x86/arm/arm-eabi-4.8" name="prebuilts_gcc_linux-x86_arm_arm-eabi-4.8" remote="cfx" revision="jb-devel" />
   <project path="prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.6" name="platform/prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.6" groups="pdk,linux,arm" />
   <project path="prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.7" name="platform_prebuilts_gcc_linux-x86_arm_arm-linux-androideabi-4.7" remote="PurityROM" revision="4.2.2" groups="pdk,linux,arm" />
+  <project path="prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.8" name="prebuilts_gcc_linux-x86_arm_arm-linux-androideabi-4.8" remote="cfx" revision="jb-devel" />
   <project path="prebuilts/gcc/linux-x86/host/i686-linux-glibc2.7-4.4.3" name="platform/prebuilts/gcc/linux-x86/host/i686-linux-glibc2.7-4.4.3" groups="pdk,linux" />
   <project path="prebuilts/gcc/linux-x86/host/i686-linux-glibc2.7-4.6" name="platform/prebuilts/gcc/linux-x86/host/i686-linux-glibc2.7-4.6" groups="pdk,linux" />
   <project path="prebuilts/gcc/linux-x86/host/x86_64-linux-glibc2.7-4.6" name="platform/prebuilts/gcc/linux-x86/host/x86_64-linux-glibc2.7-4.6" groups="pdk,linux" />
