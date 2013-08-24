@@ -391,6 +391,8 @@
   <project path="tools/motodev" name="platform/tools/motodev" groups="notdefault,motodev" />
   <project path="tools/swt" name="platform/tools/swt" groups="notdefault,tools" />
 
+  <!-- Purity extra-projects -->
   <project path="manifest" name="platform_manifest" remote="PurityROM" revision="jb-43" />
+  <project path="vendor/purity" name="vendor_purity" remote="PurityROM" revision="jb-43" />
 
 </manifest>
