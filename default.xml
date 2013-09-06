@@ -10,6 +10,8 @@
   <remote name="cm"
            fetch="https://github.com/CyanogenMod/"
            review="review.cyanogenmod.com" />
+  <remote name="Mustaavalkosta"
+           fetch="https://github.com/Mustaavalkosta" />
   <default revision="refs/tags/android-4.3_r1.1"
            remote="aosp"
            sync-j="4" />
@@ -243,7 +245,7 @@
   <project path="frameworks/opt/telephony" name="platform/frameworks/opt/telephony" groups="pdk" />
   <project path="frameworks/opt/vcard" name="platform/frameworks/opt/vcard" />
   <project path="frameworks/rs" name="platform/frameworks/rs" groups="pdk" />
-  <project path="frameworks/support" name="platform/frameworks/support" />
+  <project path="frameworks/support" name="platform_frameworks_support" remote="PurityROM" revision="jb-43" />
   <project path="frameworks/testing" name="platform/frameworks/testing" />
   <project path="frameworks/volley" name="platform/frameworks/volley" />
   <project path="frameworks/webview" name="platform/frameworks/webview" />
@@ -252,7 +254,7 @@
   <project path="hardware/broadcom/libbt" name="platform/hardware/broadcom/libbt" groups="pdk" />
   <project path="hardware/broadcom/wlan" name="platform/hardware/broadcom/wlan" groups="broadcom_wlan" />
   <project path="hardware/invensense" name="platform/hardware/invensense" groups="invensense" />
-  <project path="hardware/libhardware" name="platform/hardware/libhardware" groups="pdk" />
+  <project path="hardware/libhardware" name="android_hardware_libhardware" groups="pdk" remote="PurityROM" revision="jb-43" />
   <project path="hardware/libhardware_legacy" name="platform/hardware/libhardware_legacy" groups="pdk" />
   <project path="hardware/msm7k" name="platform/hardware/msm7k" />
   <project path="hardware/qcom/audio" name="platform/hardware/qcom/audio" groups="qcom" />
@@ -398,5 +400,9 @@
   <project path="vendor/samsung" name="platform_vendor_samsung" remote="PurityROM" revision="jb-43" />
   <project path="vendor/lge" name="platform_vendor_lge" remote="PurityROM" revision="jb-43" />
   <project path="vendor/asus" name="platform_vendor_asus" remote="PurityROM" revision="jb-43" />
+
+  <!-- gcc 4.8 -->
+  <project path="prebuilts/gcc/linux-x86/arm/arm-eabi-4.8" name="Mustaavalkosta/android_prebuilts_gcc_linux-x86_arm_arm-eabi-4.8" revision="master" />
+  <project path="prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.8" name="Mustaavalkosta/android_prebuilts_gcc_linux-x86_arm_arm-linux-androideabi-4.8" revision="master" />
 
 </manifest>
