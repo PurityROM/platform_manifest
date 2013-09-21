@@ -10,9 +10,6 @@
   <remote name="cm"
            fetch="https://github.com/CyanogenMod/"
            review="review.cyanogenmod.com" />
-  <remote  name="gh"
-           fetch="https://github.com/"
-           sync-j="4" />
   <default revision="refs/tags/android-4.3_r1.1"
            remote="aosp"
            sync-j="4" />
@@ -405,11 +402,5 @@
   <!-- gcc 4.8 -->
   <project path="prebuilts/gcc/linux-x86/arm/arm-eabi-4.8" name="android_prebuilts_gcc_linux-x86_arm_arm-eabi-4.8" remote="PurityROM" revision="master" />
   <project path="prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.8" name="android_prebuilts_gcc_linux-x86_arm_arm-linux-androideabi-4.8" remote="PurityROM" revision="master" />
-
-  <!-- Theme engine -->
-  <project path="vendor/tmobile/apps/ThemeChooser" name="AOKP/themes-platform-vendor-tmobile-apps-ThemeChooser" remote="gh" revision="jb-mr2" />
-  <project path="vendor/tmobile/libs/com.tmobile.themes" name="AOKP/vendor_tmobile_libs_com.tmobile.themes" remote="gh" revision="jb-mr2" />
-  <project path="vendor/tmobile/providers/ThemeManager" name="AOKP/vendor_tmobile_providers_ThemeManager" remote="gh" revision="jb-mr2" />
-  <project path="vendor/tmobile/products/themes" name="android_vendor_tmobile_products_themes" remote="cm" revision="cm-10.1" />
 
 </manifest>
